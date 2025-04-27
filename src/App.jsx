@@ -1,6 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import HexagonButton from './components/HexagonButton';
+import MoonButton from './components/HexagonButton';
 import Home from './components/pages/Home';
 import About from './components/pages/About';
 import Experience from './components/pages/Experience';
@@ -17,7 +17,7 @@ function App() {
           <Route path="/experience" element={<Experience />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>
-        <HexagonButton />
+        <MoonButton />
       </div>
     </Router>
   );
