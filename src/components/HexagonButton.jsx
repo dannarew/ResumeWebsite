@@ -5,7 +5,7 @@ import { useNavigate } from 'react-router-dom';
 
 const MoonContainer = styled.div`
   position: fixed;
-  top: 50%;
+  top: 30%;
   left: 50%;
   transform: translate(-50%, -50%);
   width: 400px;
@@ -34,9 +34,10 @@ const MoonQuarter = styled(motion.div)`
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #000;
-  font-weight: bold;
-  font-size: 1rem;
+  color: white;
+  font-weight: 800;
+  font-size: 0.9rem;
+  font-family: 'Monaco', monospace;
   overflow: hidden;
   background: url('/moon.png');
   background-size: 200% 200%;
@@ -44,9 +45,20 @@ const MoonQuarter = styled(motion.div)`
   border: none;
   box-shadow: none;
   text-align: center;
+  text-shadow: 
+    -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000,
+    3px 3px 6px rgba(0, 0, 0, 0.7);
   
   &:hover {
     filter: brightness(1.1);
+  }
+
+  span {
+    opacity: 0;
+    transition: opacity 0.1s ease;
   }
 `;
 
@@ -144,7 +156,7 @@ const MoonButton = () => {
             whileHover={{ scale: 1.1, zIndex: 2 }}
             onClick={() => navigate(section.path)}
           >
-            {section.name}
+            <span style={{ opacity: isExpanded ? 1 : 0 }}>{section.name}</span>
           </QuarterComponent>
         );
       })}
