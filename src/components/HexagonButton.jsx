@@ -8,8 +8,8 @@ const MoonContainer = styled.div`
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 250px;
-  height: 250px;
+  width: 400px;
+  height: 400px;
   z-index: 10;
   display: flex;
   align-items: center;
@@ -20,7 +20,7 @@ const MainMoon = styled(motion.div)`
   position: absolute;
   width: 100%;
   height: 100%;
-  background: #FFD700;
+  background: url('/moon.png') center/cover;
   border-radius: 50%;
   cursor: pointer;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -30,18 +30,23 @@ const MoonQuarter = styled(motion.div)`
   position: absolute;
   width: 50%;
   height: 50%;
-  background: #FFD700;
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
   color: #000;
   font-weight: bold;
-  font-size: 1.2rem;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  font-size: 1rem;
+  overflow: hidden;
+  background: url('/moon.png');
+  background-size: 200% 200%;
+  background-repeat: no-repeat;
+  border: none;
+  box-shadow: none;
+  text-align: center;
   
   &:hover {
-    background: #FFC000;
+    filter: brightness(1.1);
   }
 `;
 
@@ -50,6 +55,9 @@ const TopLeftQuarter = styled(MoonQuarter)`
   left: 0;
   border-top-left-radius: 100%;
   transform-origin: bottom right;
+  background-position: 0% 0%;
+  padding-top: 25%;
+  padding-left: 25%;
 `;
 
 const TopRightQuarter = styled(MoonQuarter)`
@@ -57,6 +65,9 @@ const TopRightQuarter = styled(MoonQuarter)`
   right: 0;
   border-top-right-radius: 100%;
   transform-origin: bottom left;
+  background-position: 100% 0%;
+  padding-top: 25%;
+  padding-right: 25%;
 `;
 
 const BottomLeftQuarter = styled(MoonQuarter)`
@@ -64,6 +75,9 @@ const BottomLeftQuarter = styled(MoonQuarter)`
   left: 0;
   border-bottom-left-radius: 100%;
   transform-origin: top right;
+  background-position: 0% 100%;
+  padding-bottom: 25%;
+  padding-left: 25%;
 `;
 
 const BottomRightQuarter = styled(MoonQuarter)`
@@ -71,6 +85,9 @@ const BottomRightQuarter = styled(MoonQuarter)`
   right: 0;
   border-bottom-right-radius: 100%;
   transform-origin: top left;
+  background-position: 100% 100%;
+  padding-bottom: 25%;
+  padding-right: 25%;
 `;
 
 const MoonButton = () => {
