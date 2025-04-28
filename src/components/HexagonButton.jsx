@@ -102,9 +102,19 @@ const BottomRightQuarter = styled(MoonQuarter)`
   padding-right: 25%;
 `;
 
-const MoonButton = () => {
+const MoonButton = ({ onHoverChange }) => {
   const [isExpanded, setIsExpanded] = useState(false);
   const navigate = useNavigate();
+
+  const handleMouseEnter = () => {
+    setIsExpanded(true);
+    onHoverChange?.(true);
+  };
+
+  const handleMouseLeave = () => {
+    setIsExpanded(false);
+    onHoverChange?.(false);
+  };
 
   const sections = [
     { name: 'Home', path: '/', component: TopLeftQuarter },
@@ -141,8 +151,8 @@ const MoonButton = () => {
 
   return (
     <MoonContainer
-      onMouseEnter={() => setIsExpanded(true)}
-      onMouseLeave={() => setIsExpanded(false)}
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
     >
       {sections.map((section, index) => {
         const QuarterComponent = section.component;
