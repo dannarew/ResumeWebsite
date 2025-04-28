@@ -145,7 +145,7 @@ const AppContent = () => {
 
 function App() {
   return (
-    <Router basename={import.meta.env.BASE_URL}>
+    <Router basename="/hexagon-portfolio">
       <AppContent />
     </Router>
   );
