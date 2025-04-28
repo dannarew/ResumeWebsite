@@ -126,8 +126,16 @@ const AboutContent = styled.div`
 
 const About = () => {
   const handleResumeClick = () => {
-    // Open resume PDF in a new tab
-    window.open('/resume.pdf', '_blank');
+    try {
+      // Open resume PDF in a new tab with the correct filename
+      const resumeWindow = window.open('/logos/theDANresume.pdf', '_blank');
+      if (!resumeWindow) {
+        alert('Please allow pop-ups to view the resume');
+      }
+    } catch (error) {
+      console.error('Error opening resume:', error);
+      alert('Unable to open resume. Please try again.');
+    }
   };
 
   return (
@@ -140,7 +148,7 @@ const About = () => {
         </p>
         
         <p>
-          Beyond academics, I've built practical experience through roles such as Information Technology Support Specialist and Resident Assistant. These experiences have sharpened my skills in troubleshooting, communication, leadership, and project management — all of which complement my technical abilities.
+          Beyond coursework, I've built practical experience through roles such as Information Technology Support Specialist and Resident Assistant. These experiences have sharpened my skills in troubleshooting, communication, leadership, and project management — all of which complement my technical abilities.
         </p>
         
         <p>

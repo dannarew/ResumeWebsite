@@ -1,12 +1,101 @@
-# React + Vite
+# Personal Portfolio Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, responsive portfolio website built with React and Vite, featuring a hexagonal design theme and interactive components.
 
-Currently, two official plugins are available:
+## 🌟 Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Responsive Design**: Fully responsive layout that works on all devices
+- **Interactive UI**: Hexagonal-themed buttons and navigation elements
+- **Smooth Transitions**: Elegant page transitions and animations
+- **Contact Form**: Integrated EmailJS functionality for direct communication
+- **Resume Download**: Easy access to downloadable resume
+- **LinkedIn Integration**: Direct link to professional profile
+- **Experience Showcase**: Interactive carousel for displaying work experience
+- **Modern Styling**: Clean, professional design with consistent branding
 
-## Expanding the ESLint configuration
+## 📋 Pages
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- **Home**: Landing page with introduction and navigation
+- **About**: Personal information, skills, and downloadable resume
+- **Experience**: Interactive carousel showcasing work experience with company logos
+- **Contact**: Contact form with EmailJS integration and LinkedIn button
+
+## 🛠️ Technologies Used
+
+- **React**: Frontend framework
+- **Vite**: Build tool and development server
+- **EmailJS**: Email service integration
+- **Styled Components**: CSS-in-JS styling
+- **GitHub Pages**: Hosting platform
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+- Node.js (v14 or higher)
+- npm (v6 or higher)
+
+### Installation
+
+1. Clone the repository:
+   ```
+   git clone https://github.com/dannarew/dannarew.github.io.git
+   ```
+
+2. Navigate to the project directory:
+   ```
+   cd hexagon-portfolio
+   ```
+
+3. Install dependencies:
+   ```
+   npm install
+   ```
+
+4. Start the development server:
+   ```
+   npm run dev
+   ```
+
+5. Build for production:
+   ```
+   npm run build
+   ```
+
+6. Deploy to GitHub Pages:
+   ```
+   npm run deploy
+   ```
+
+## 📦 Project Structure
+
+```
+hexagon-portfolio/
+├── public/              # Static assets
+├── src/
+│   ├── assets/          # Images and other assets
+│   │   ├── pages/       # Page components
+│   │   └── HexagonButton.jsx
+│   ├── styles/          # Global styles
+│   ├── App.jsx          # Main application component
+│   └── main.jsx         # Application entry point
+├── package.json         # Dependencies and scripts
+└── vite.config.js       # Vite configuration
+```
+
+## 🔧 Configuration
+
+- **EmailJS**: Configure your EmailJS service ID and template ID in the Contact component
+- **GitHub Pages**: The `homepage` field in package.json is set to `https://dannarew.github.io`
+
+## 📝 License
+
+This project is open source and available under the [MIT License](LICENSE).
+
+## 👤 Author
+
+Danna Rew - [GitHub](https://github.com/dannarew)
+
+---
+
+*This portfolio website is designed to showcase professional experience and skills in an engaging, interactive format.*
