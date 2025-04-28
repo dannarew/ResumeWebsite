@@ -35,7 +35,7 @@ jobs:
       - name: Build
         run: npm run build
         env:
-          BASE_PATH: "/"
+          BASE_PATH: "/hexagon-portfolio/"
 
       - name: Setup Pages
         uses: actions/configure-pages@v4
