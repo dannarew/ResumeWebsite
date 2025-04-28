@@ -6,7 +6,7 @@ A modern, responsive portfolio website built with React and Vite, featuring an a
 
 - **Responsive Design**: Fully responsive layout that works on all devices
 - **Interactive UI**: Animated radial moon menu for navigation
-- **Smooth Transitions**: Elegant page transitions and animations
+- **Smooth Transitions**: Dynamic page transitions and animations
 - **Contact Form**: Integrated EmailJS functionality for direct communication
 - **Resume Download**: Easy access to downloadable resume
 - **LinkedIn Integration**: Direct link to professional profile
@@ -23,8 +23,8 @@ A modern, responsive portfolio website built with React and Vite, featuring an a
 ## 🛠️ Technologies Used
 
 - **JavaScript**: Core programming language
-- **React 19**: Frontend framework
-- **Vite 6**: Build tool and development server
+- **React**: Frontend framework
+- **Vite**: Build tool and development server
 - **EmailJS**: Email service integration
 - **Emotion**: CSS-in-JS styling
 - **Framer Motion**: Animation library
@@ -102,4 +102,4 @@ Dannarew - [GitHub](https://github.com/dannarew)
 
 ---
 
-*This portfolio website is designed to showcase professional experience and skills in an engaging, interactive format.*
+

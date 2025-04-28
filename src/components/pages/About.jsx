@@ -87,6 +87,7 @@ const AboutContent = styled.div`
   overflow-y: auto;
   font-size: 1.1rem;
   line-height: 1.6;
+  color: white;
   
   &::-webkit-scrollbar {
     width: 6px;
@@ -108,6 +109,7 @@ const AboutContent = styled.div`
 
   p {
     margin-bottom: 1.5rem;
+    color: white;
   }
 
   p:last-child {
@@ -117,10 +119,12 @@ const AboutContent = styled.div`
   ul {
     margin-bottom: 1.5rem;
     padding-left: 1.5rem;
+    color: white;
   }
 
   li {
     margin-bottom: 0.5rem;
+    color: white;
   }
 `;
 
@@ -128,7 +132,7 @@ const About = () => {
   const handleResumeClick = () => {
     try {
       // Open resume PDF in a new tab with the correct filename
-      const resumeWindow = window.open('/logos/theDANresume.pdf', '_blank');
+      const resumeWindow = window.open('/theDANresume.pdf', '_blank');
       if (!resumeWindow) {
         alert('Please allow pop-ups to view the resume');
       }
