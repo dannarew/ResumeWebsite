@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap'); */
 
 :root {
   --primary-purple: #6B46C1;
@@ -18,8 +18,9 @@
 body {
   margin: 0;
   min-height: 100vh;
-  background: url('/purple-sky.jpg') center/cover fixed;
-  font-family: 'Inter', sans-serif;
+  background: url('/purple-sky.jpg') no-repeat center center fixed;
+  background-size: cover;
+  font-family: 'Monaco', monospace;
   color: #333;
   overflow-x: hidden;
 }
