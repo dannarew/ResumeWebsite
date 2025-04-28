@@ -1,11 +1,11 @@
 # Personal Portfolio Website
 
-A modern, responsive portfolio website built with React and Vite, featuring a hexagonal design theme and interactive components.
+A modern, responsive portfolio website built with React and Vite, featuring an animated radial moon menu and interactive components.
 
 ## 🌟 Features
 
 - **Responsive Design**: Fully responsive layout that works on all devices
-- **Interactive UI**: Hexagonal-themed buttons and navigation elements
+- **Interactive UI**: Animated radial moon menu for navigation
 - **Smooth Transitions**: Elegant page transitions and animations
 - **Contact Form**: Integrated EmailJS functionality for direct communication
 - **Resume Download**: Easy access to downloadable resume
@@ -22,10 +22,13 @@ A modern, responsive portfolio website built with React and Vite, featuring a he
 
 ## 🛠️ Technologies Used
 
-- **React**: Frontend framework
-- **Vite**: Build tool and development server
+- **JavaScript**: Core programming language
+- **React 19**: Frontend framework
+- **Vite 6**: Build tool and development server
 - **EmailJS**: Email service integration
-- **Styled Components**: CSS-in-JS styling
+- **Emotion**: CSS-in-JS styling
+- **Framer Motion**: Animation library
+- **React Router DOM 7**: Navigation and routing
 - **GitHub Pages**: Hosting platform
 
 ## 🚀 Getting Started
@@ -74,8 +77,9 @@ hexagon-portfolio/
 ├── public/              # Static assets
 ├── src/
 │   ├── assets/          # Images and other assets
+│   ├── components/      # React components
 │   │   ├── pages/       # Page components
-│   │   └── HexagonButton.jsx
+│   │   └── HexagonButton.jsx  # Moon menu navigation
 │   ├── styles/          # Global styles
 │   ├── App.jsx          # Main application component
 │   └── main.jsx         # Application entry point
@@ -94,7 +98,7 @@ This project is open source and available under the [MIT License](LICENSE).
 
 ## 👤 Author
 
-Danna Rew - [GitHub](https://github.com/dannarew)
+Dannarew - [GitHub](https://github.com/dannarew)
 
 ---
 
