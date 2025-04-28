@@ -18,6 +18,9 @@ concurrency:
 jobs:
   build:
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: hexagon-portfolio
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -27,21 +30,18 @@ jobs:
         with:
           node-version: '20'
           cache: 'npm'
-          cache-dependency-path: 'hexagon-portfolio/package-lock.json'
+          cache-dependency-path: './hexagon-portfolio/package-lock.json'
 
       - name: Install dependencies
-        run: |
-          cd hexagon-portfolio
-          npm ci
+        run: npm ci
 
       - name: Build
-        run: |
-          cd hexagon-portfolio
-          npm run build
+        run: npm run build
 
       - name: Move build files
         run: |
-          cp -r hexagon-portfolio/dist/* .
+          cp -r dist/* ../
+          cd ..
           rm -rf hexagon-portfolio/dist
 
       - name: Setup Pages
