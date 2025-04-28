@@ -30,12 +30,14 @@ jobs:
           cache-dependency-path: '**/package-lock.json'
 
       - name: Install dependencies
-        working-directory: hexagon-portfolio
-        run: npm ci
+        run: |
+          cd hexagon-portfolio
+          npm ci
 
       - name: Build
-        working-directory: hexagon-portfolio
-        run: npm run build
+        run: |
+          cd hexagon-portfolio
+          npm run build
 
       - name: Move build files
         run: |
