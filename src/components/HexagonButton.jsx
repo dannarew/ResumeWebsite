@@ -20,7 +20,7 @@ const MainMoon = styled(motion.div)`
   position: absolute;
   width: 100%;
   height: 100%;
-  background: url('../assets/moon.png') center/cover;
+  background: url('/moon.png') center/cover;
   border-radius: 50%;
   cursor: pointer;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -30,7 +30,7 @@ const MoonQuarter = styled(motion.div)`
   position: absolute;
   width: 100%;
   height: 100%;
-  background: url('../assets/moon.png');
+  background: url('/moon.png');
   background-size: cover;
   background-position: center;
   border-radius: 50%;
