@@ -28,16 +28,38 @@ const MainMoon = styled(motion.div)`
 
 const MoonQuarter = styled(motion.div)`
   position: absolute;
-  width: 100%;
-  height: 100%;
-  background: url('/moon.png');
-  background-size: cover;
-  background-position: center;
-  border-radius: 50%;
+  width: 50%;
+  height: 50%;
   cursor: pointer;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  opacity: 0;
-  transition: opacity 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: 800;
+  font-size: 0.9rem;
+  font-family: 'Monaco', monospace;
+  overflow: hidden;
+  background: url('/moon.png');
+  background-size: 200% 200%;
+  background-repeat: no-repeat;
+  border: none;
+  box-shadow: none;
+  text-align: center;
+  text-shadow: 
+    -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000,
+    3px 3px 6px rgba(0, 0, 0, 0.7);
+  
+  &:hover {
+    filter: brightness(1.1);
+  }
+
+  span {
+    opacity: 0;
+    transition: opacity 0.1s ease;
+  }
 `;
 
 const TopLeftQuarter = styled(MoonQuarter)`

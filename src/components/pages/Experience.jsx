@@ -251,7 +251,7 @@ const Experience = () => {
             </ContentSection>
             {(currentRole === 0 || currentRole === 1) && (
               <LogoSection>
-                <Logo src="/dannarew.github.io/marist.jpg" alt="Marist University Logo" />
+                <Logo src="/marist.jpg" alt="Marist University Logo" />
               </LogoSection>
             )}
           </RoleCard>

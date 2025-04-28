@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
 :root {
   --primary-purple: #6B46C1;
   --secondary-purple: #9F7AEA;
@@ -15,7 +17,7 @@
 
 body {
   min-height: 100vh;
-  background: url('/dannarew.github.io/purple-sky.jpg') no-repeat center center fixed;
+  background: url('/purple-sky.jpg') no-repeat center center fixed;
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
