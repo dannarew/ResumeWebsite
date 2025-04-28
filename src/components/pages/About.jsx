@@ -66,25 +66,9 @@ const ResumeButton = styled.button`
   }
 `;
 
-const Paragraph = styled.p`
-  color: rgba(255, 255, 255, 0.9);
-  margin: 0 0 1.5rem 0;
-  line-height: 1.6;
-  font-size: 1.1rem;
-
-  &:last-child {
-    margin-bottom: 0;
-  }
-`;
-
 const AboutContent = styled.div`
   width: 100%;
-  height: calc(100% - 3.5rem);
-  background: rgba(255, 255, 255, 0.1);
-  padding: 1.5rem;
-  border-radius: 10px;
-  backdrop-filter: blur(10px);
-  overflow-y: auto;
+  height: 100%;
   font-size: 1.1rem;
   line-height: 1.6;
   color: white;
@@ -132,7 +116,7 @@ const About = () => {
   const handleResumeClick = () => {
     try {
       // Open resume PDF in a new tab with the correct filename
-      const resumeWindow = window.open('/theDANresume.pdf', '_blank');
+      const resumeWindow = window.open('/hexagon-portfolio/theDANresume.pdf', '_blank');
       if (!resumeWindow) {
         alert('Please allow pop-ups to view the resume');
       }
@@ -146,43 +130,45 @@ const About = () => {
     <AboutContainer>
       <Title>About Me</Title>
       <ResumeButton onClick={handleResumeClick}>Resume</ResumeButton>
-      <AboutContent>
-        <p>
-          Hello! I'm Daniel a dual Bachelor of Science student at Marist College, studying Computer Science and Biology, with an expected graduation date of May 2027. Throughout my time at Marist, I've developed a strong technical foundation through coursework in Object-Oriented Programming, Database Development, Web Development, Software Engineering, System Design, and Computer Organization.
-        </p>
-        
-        <p>
-          Beyond coursework, I've built practical experience through roles such as Information Technology Support Specialist and Resident Assistant. These experiences have sharpened my skills in troubleshooting, communication, leadership, and project management — all of which complement my technical abilities.
-        </p>
-        
-        <p>
-          I enjoy creating unique and helpful experiences, especially health related ones. I have led and contributed to several projects, including:
-        </p>
-        
-        <ul>
-          <li>
-            <strong>Food Delivery App:</strong> Built a full-stack application using Python (Flask), SQL, JavaScript, HTML, and CSS, applying Agile methodologies to streamline development.
-          </li>
-          <li>
-            <strong>CRUD REST API:</strong> Developed a scalable, Dockerized REST API with Java Spring Boot and deployed it to AWS, achieving 100% test coverage.
-          </li>
-          <li>
-            <strong>Credit Card Segmentation:</strong> Built a data-driven customer segmentation tool using Python, Scikit-learn, and Streamlit, improving risk categorization accuracy.
-          </li>
-        </ul>
-        
-        <p>
-          I have hands-on experience with technologies like Java, Python, C/C++, SQL, JavaScript, React, Docker, and more. I'm also passionate about exploring fields like machine learning and backend systems architecture.
-        </p>
-        
-        <p>
-          I'm currently seeking new opportunities and projects where I can apply my skills, continue learning, and contribute to forward-thinking teams.
-        </p>
-        
-        <p>
-          Let's connect :)
-        </p>
-      </AboutContent>
+      <Content>
+        <AboutContent>
+          <p>
+            Hello! I'm Daniel a dual Bachelor of Science student at Marist College, studying Computer Science and Biology, with an expected graduation date of May 2027. Throughout my time at Marist, I've developed a strong technical foundation through coursework in Object-Oriented Programming, Database Development, Web Development, Software Engineering, System Design, and Computer Organization.
+          </p>
+          
+          <p>
+            Beyond coursework, I've built practical experience through roles such as Information Technology Support Specialist and Resident Assistant. These experiences have sharpened my skills in troubleshooting, communication, leadership, and project management — all of which complement my technical abilities.
+          </p>
+          
+          <p>
+            I enjoy creating unique and helpful experiences, especially health related ones. I have led and contributed to several projects, including:
+          </p>
+          
+          <ul>
+            <li>
+              <strong>Food Delivery App:</strong> Built a full-stack application using Python (Flask), SQL, JavaScript, HTML, and CSS, applying Agile methodologies to streamline development.
+            </li>
+            <li>
+              <strong>CRUD REST API:</strong> Developed a scalable, Dockerized REST API with Java Spring Boot and deployed it to AWS, achieving 100% test coverage.
+            </li>
+            <li>
+              <strong>Credit Card Segmentation:</strong> Built a data-driven customer segmentation tool using Python, Scikit-learn, and Streamlit, improving risk categorization accuracy.
+            </li>
+          </ul>
+          
+          <p>
+            I have hands-on experience with technologies like Java, Python, C/C++, SQL, JavaScript, React, Docker, and more. I'm also passionate about exploring fields like machine learning and backend systems architecture.
+          </p>
+          
+          <p>
+            I'm currently seeking new opportunities and projects where I can apply my skills, continue learning, and contribute to forward-thinking teams.
+          </p>
+          
+          <p>
+            Let's connect :)
+          </p>
+        </AboutContent>
+      </Content>
     </AboutContainer>
   );
 };

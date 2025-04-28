@@ -111,10 +111,10 @@ const slideVariants = {
 const AppContent = () => {
   const [isMoonHovered, setIsMoonHovered] = useState(false);
   const location = useLocation();
-  const isHomePage = location.pathname === '/';
-  const isExperience = location.pathname === '/experience';
-  const isAbout = location.pathname === '/about';
-  const isContact = location.pathname === '/contact';
+  const isHomePage = location.pathname === '/' || location.pathname === '/hexagon-portfolio/' || location.pathname === '/hexagon-portfolio';
+  const isExperience = location.pathname === '/experience' || location.pathname === '/hexagon-portfolio/experience';
+  const isAbout = location.pathname === '/about' || location.pathname === '/hexagon-portfolio/about';
+  const isContact = location.pathname === '/contact' || location.pathname === '/hexagon-portfolio/contact';
 
   return (
     <MainContainer>
@@ -124,9 +124,14 @@ const AppContent = () => {
         <ContentSection isExperience={isExperience} isAbout={isAbout} isContact={isContact}>
           <ContentWrapper isContact={isContact}>
             <Routes>
+              <Route path="/" element={<Home isMoonHovered={isMoonHovered} />} />
+              <Route path="/hexagon-portfolio/" element={<Home isMoonHovered={isMoonHovered} />} />
               <Route path="/about" element={<About />} />
+              <Route path="/hexagon-portfolio/about" element={<About />} />
               <Route path="/experience" element={<Experience />} />
+              <Route path="/hexagon-portfolio/experience" element={<Experience />} />
               <Route path="/contact" element={<Contact />} />
+              <Route path="/hexagon-portfolio/contact" element={<Contact />} />
             </Routes>
           </ContentWrapper>
         </ContentSection>
