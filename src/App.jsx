@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import styled from '@emotion/styled';
-import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, useLocation, Navigate } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import MoonButton from './components/HexagonButton';
 import Home from './components/pages/Home';
@@ -111,10 +111,13 @@ const slideVariants = {
 const AppContent = () => {
   const [isMoonHovered, setIsMoonHovered] = useState(false);
   const location = useLocation();
-  const isHomePage = location.pathname === '/' || location.pathname === '/hexagon-portfolio/' || location.pathname === '/hexagon-portfolio';
-  const isExperience = location.pathname === '/experience' || location.pathname === '/hexagon-portfolio/experience';
-  const isAbout = location.pathname === '/about' || location.pathname === '/hexagon-portfolio/about';
-  const isContact = location.pathname === '/contact' || location.pathname === '/hexagon-portfolio/contact';
+  
+  // Simplified path checking that works with both local and GitHub Pages
+  const path = location.pathname.replace('/hexagon-portfolio', '');
+  const isHomePage = path === '/' || path === '';
+  const isExperience = path === '/experience';
+  const isAbout = path === '/about';
+  const isContact = path === '/contact';
 
   return (
     <MainContainer>
@@ -123,16 +126,15 @@ const AppContent = () => {
       ) : (
         <ContentSection isExperience={isExperience} isAbout={isAbout} isContact={isContact}>
           <ContentWrapper isContact={isContact}>
-            <Routes>
-              <Route path="/" element={<Home isMoonHovered={isMoonHovered} />} />
-              <Route path="/hexagon-portfolio/" element={<Home isMoonHovered={isMoonHovered} />} />
-              <Route path="/about" element={<About />} />
-              <Route path="/hexagon-portfolio/about" element={<About />} />
-              <Route path="/experience" element={<Experience />} />
-              <Route path="/hexagon-portfolio/experience" element={<Experience />} />
-              <Route path="/contact" element={<Contact />} />
-              <Route path="/hexagon-portfolio/contact" element={<Contact />} />
-            </Routes>
+            <AnimatePresence mode="wait">
+              <Routes location={location} key={location.pathname}>
+                <Route path="/" element={<Home isMoonHovered={isMoonHovered} />} />
+                <Route path="/about" element={<About />} />
+                <Route path="/experience" element={<Experience />} />
+                <Route path="/contact" element={<Contact />} />
+                <Route path="*" element={<Navigate to="/" replace />} />
+              </Routes>
+            </AnimatePresence>
           </ContentWrapper>
         </ContentSection>
       )}
@@ -143,7 +145,7 @@ const AppContent = () => {
 
 function App() {
   return (
-    <Router>
+    <Router basename={import.meta.env.BASE_URL}>
       <AppContent />
     </Router>
   );
