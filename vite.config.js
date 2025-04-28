@@ -4,7 +4,7 @@ import path from 'path';
 
 export default defineConfig({
   plugins: [react()],
-  base: "/",
+  base: "/dannarew.github.io/",
   publicDir: path.resolve(__dirname, '../public'),
   resolve: {
     alias: {
