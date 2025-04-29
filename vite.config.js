@@ -4,7 +4,7 @@ import path from 'path';
 
 export default defineConfig({
   plugins: [react()],
-  base: "/hexagon-portfolio/",
+  base: "/",
   publicDir: path.resolve(__dirname, '../public'),
   resolve: {
     alias: {

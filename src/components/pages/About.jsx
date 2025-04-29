@@ -116,7 +116,7 @@ const About = () => {
   const handleResumeClick = () => {
     try {
       // Open resume PDF in a new tab with the correct filename
-      const resumeWindow = window.open('/hexagon-portfolio/theDANresume.pdf', '_blank');
+      const resumeWindow = window.open('/theDANresume.pdf', '_blank');
       if (!resumeWindow) {
         alert('Please allow pop-ups to view the resume');
       }

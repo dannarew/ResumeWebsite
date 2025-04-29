@@ -180,13 +180,15 @@ const Experience = () => {
       title: "Information Technology Support Specialist",
       company: "Marist University",
       date: "Mar. 2024 - Aug. 2024",
-      description: "Provided technical support and assistance to university staff and students.\n\n• Communicate with managers to set up campus computers used on campus\n• Assess and troubleshoot computer problems brought by students, faculty and staff\n• Maintain upkeep of computers, classroom equipment, and 200 printers across campus"
+      description: "Provided technical support and assistance to university staff and students.\n\n• Communicate with managers to set up campus computers used on campus\n• Assess and troubleshoot computer problems brought by students, faculty and staff\n• Maintain upkeep of computers, classroom equipment, and 200 printers across campus",
+      logo: "/marist.jpg"
     },
     {
       title: "Resident Assistant",
       company: "Marist University",
       date: "Mar. 2025 - Present",
-      description: "Oversee residential community of 75+ undergraduate students, fostering academic success and personal development.\n\n• Manage a college residence hall of 75+ diverse undergraduate students\n• Create a residence hall conducive to academic, personal, and social growth\n• Collaborate with other RA's on initiatives resulting in a safe, and enjoyable living environment\n• Serve as a role model for students by behaving in a mature and responsible manner, using good judgment, and abiding by institutional policies"
+      description: "Oversee residential community of 75+ undergraduate students, fostering academic success and personal development.\n\n• Manage a college residence hall of 75+ diverse undergraduate students\n• Create a residence hall conducive to academic, personal, and social growth\n• Collaborate with other RA's on initiatives resulting in a safe, and enjoyable living environment\n• Serve as a role model for students by behaving in a mature and responsible manner, using good judgment, and abiding by institutional policies",
+      logo: "/marist.jpg"
     }
   ];
 
@@ -251,7 +253,7 @@ const Experience = () => {
             </ContentSection>
             {(currentRole === 0 || currentRole === 1) && (
               <LogoSection>
-                <Logo src="/hexagon-portfolio/marist.jpg" alt="Marist Logo" />
+                <Logo src="/marist.jpg" alt="Marist Logo" />
               </LogoSection>
             )}
           </RoleCard>
