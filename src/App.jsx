@@ -113,7 +113,7 @@ const AppContent = () => {
   const location = useLocation();
   
   // Simplified path checking that works with both local and GitHub Pages
-  const path = location.pathname.replace('/hexagon-portfolio', '');
+  const path = location.pathname;
   const isHomePage = path === '/' || path === '';
   const isExperience = path === '/experience';
   const isAbout = path === '/about';
