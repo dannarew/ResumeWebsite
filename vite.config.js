@@ -14,5 +14,20 @@ export default defineConfig({
   build: {
     outDir: 'dist',
     assetsDir: '',
+    rollupOptions: {
+      output: {
+        assetFileNames: (assetInfo) => {
+          let extType = assetInfo.name.split('.').at(1);
+          if (/png|jpe?g|svg|gif|tiff|bmp|ico/i.test(extType)) {
+            extType = 'img';
+          }
+          return `assets/${extType}/[name]-[hash][extname]`;
+        },
+      },
+    },
   },
+  server: {
+    port: 5173,
+    strictPort: true
+  }
 });
