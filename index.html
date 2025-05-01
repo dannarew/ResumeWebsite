@@ -9,5 +9,14 @@
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
+    <script>
+      // Handle GitHub Pages routing
+      if (window.location.hostname === 'dannarew.github.io') {
+        // Ensure we're at the root path
+        if (window.location.pathname !== '/') {
+          window.history.replaceState({}, '', '/');
+        }
+      }
+    </script>
   </body>
 </html>
